@@ -25,13 +25,32 @@ document.addEventListener("DOMContentLoaded", function () {
     addMessage(input, "user");
 
     let response;
+    const lowerInput = input.toLowerCase();
     if (
-      input.toLowerCase().includes("tijd") ||
-      input.toLowerCase().includes("time")
+      lowerInput.includes("tijd") ||
+      lowerInput.includes("time") ||
+      lowerInput.includes("hoe laat")
     ) {
       response = `Het is nu ${getCurrentTime()}.`;
+    } else if (
+      lowerInput.includes("datum") ||
+      lowerInput.includes("date") ||
+      lowerInput.includes("welke dag")
+    ) {
+      const now = new Date();
+      const date = now.toLocaleDateString("nl-NL");
+      response = `Het is vandaag ${date}.`;
+    } else if (lowerInput.includes("weer") || lowerInput.includes("weather")) {
+      response = "Het weer is altijd mooi bij mij op de wei! ☀️";
+    } else if (
+      lowerInput.includes("hallo") ||
+      lowerInput.includes("hi") ||
+      lowerInput.includes("hey")
+    ) {
+      response = "Hallo! Wat kan ik voor je doen?";
     } else {
-      response = "Sorry, ik begrijp alleen vragen over de tijd op dit moment.";
+      response =
+        "Sorry, ik begrijp alleen vragen over tijd, datum, weer of groeten op dit moment.";
     }
 
     setTimeout(() => addMessage(response, "sheep"), 500);
@@ -46,3 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};

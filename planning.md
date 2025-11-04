@@ -16,7 +16,7 @@ Dit project is een webgebaseerde chatapplicatie waar een schaap vragen beantwoor
 - [x] CSS styling toevoegen (style.css)
 - [x] JavaScript logica voor tijdvragen (script.js)
 - [x] Schaap visueel toevoegen aan de interface
-- [ ] Meer vragen toevoegen (bijv. weer, datum)
+- [x] Meer vragen toevoegen (datum, weer, groeten)
 - [ ] Responsief ontwerp voor mobiel
 - [ ] Gebruikersfeedback implementeren
 - [ ] Eindtesten en bugs oplossen
