@@ -21,6 +21,12 @@ h1 {
   color: #4a4a4a;
 }
 
+.sheep-avatar {
+  text-align: center;
+  font-size: 4em;
+  margin: 20px 0;
+}
+
 .chat-window {
   height: 300px;
   overflow-y: auto;
